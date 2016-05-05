@@ -10,4 +10,8 @@
         repo: https://github.com/cyeun/flaskr.git
         dest: /srv/nodeinfra
         accept_hostkey: true
+    - name: Install git
+      dnf:
+        name: git
+        state: present
 
