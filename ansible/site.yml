@@ -5,4 +5,8 @@
   tasks:
     - name: do nothing
       command: /bin/true
+    - git:
+        repo: git@github.com:cyeun/flaskr.git
+        dest: /srv/nodeinfra
+        accept_hostkey: true
 
