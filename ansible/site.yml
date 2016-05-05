@@ -10,8 +10,14 @@
         repo: https://github.com/cyeun/flaskr.git
         dest: /srv/nodeinfra
         accept_hostkey: true
-    - name: Install git
+    - name: Install flaskr
       dnf:
-        name: git
+        name: python-flask
         state: present
+    - name: create flaskr init script
+      copy:
+        src: /srv/nodeinfra/init.d/flaskr
+        dest: /etc/rc.d/init.d
+
+
 
